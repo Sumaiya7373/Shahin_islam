@@ -1,39 +1,58 @@
 /**
- * Tag All Command - Mention all group members
+ * Ta/**
+ * TagAll Command (Bot admin না হলেও কাজ করবে)
  */
 
 module.exports = {
-    name: 'tagall',
-    aliases: ['mentionall', 'everyone'],
-    category: 'admin',
-    description: 'Tag all group members',
-    usage: '.tagall <message>',
-    groupOnly: true,
-    adminOnly: true,
-    botAdminNeeded: true,
-    
-    async execute(sock, msg, args, extra) {
-      try {
-        const message = args.join(' ') || 'Everyone!';
-        
-        const participants = extra.groupMetadata.participants.map(p => p.id);
-        
-        let text = `📢 *GROUP ANNOUNCEMENT*\n\n`;
-        text += `${message}\n\n`;
-        text += `👥 Tagged Members:\n`;
-        
-        participants.forEach((participant, index) => {
-          text += `${index + 1}. @${participant.split('@')[0]}\n`;
-        });
-        
-        await sock.sendMessage(extra.from, {
-          text,
-          mentions: participants
-        }, { quoted: msg });
-        
-      } catch (error) {
-        await extra.reply(`❌ Error: ${error.message}`);
+  name: 'tagall',
+  aliases: ['everyone', 'mentionall'],
+  category: 'group',
+  groupOnly: true,
+
+  async execute(sock, msg, args, extra) {
+    try {
+      const groupMetadata = await sock.groupMetadata(extra.from);
+      const members = groupMetadata.participants;
+
+      const emojis = [
+        "│🌸 ᩧ𝆺ྀི𝅥","│👑 ᩧ𝆺ྀི𝅥","│🎀 ᩧ𝆺ྀི𝅥",
+        "│🦋 ᩧ𝆺ྀི𝅥","│💎 ᩧ𝆺ྀི𝅥","│🎾 ᩧ𝆺ྀི𝅥",
+        "│🎈 ᩧ𝆺ྀི𝅥","│🧁 ᩧ𝆺ྀི𝅥","│🍿 ᩧ𝆺ྀི𝅥","│🪀 ᩧ𝆺ྀི𝅥"
+      ];
+
+      const customMsg = args.join(' ') || '💗 ATTENTION EVERYONE 💗';
+
+      let text = `
+🪀 🇬‌𝐑𝐎𝐔𝐏 : ${groupMetadata.subject}
+🪀 🇲‌𝐄𝐌𝐁𝐄𝐑𝐒 : ${members.length}
+🪀 🇲‌𝐄𝐒𝐒𝐀𝐆𝐄 : ${customMsg}
+
+╭┈─「 ɦเ αℓℓ ƒɾเεɳ∂ร 🥰 」┈❍
+`;
+
+      let count = 0;
+      for (const m of members) {
+        const emoji = emojis[count % emojis.length];
+        text += `${emoji} @${m.id.split('@')[0]}\n`;
+        count++;
       }
+
+      text += `╰────────────❍
+
+💬 Sent with Love by 𓆩Xtylish-Shahin𓆪 🖤
+💗 Stay Active — Stay Stylish! ✨
+`;
+
+      await sock.sendMessage(extra.from, {
+        text,
+        mentions: members.map(m => m.id)
+      }, { quoted: msg });
+
+    } catch (err) {
+      console.error('TagAll Error:', err);
+      await sock.sendMessage(extra.from, {
+        text: '⚠ কিছু সমস্যা হয়েছে ভাই 😅'
+      }, { quoted: msg });
     }
-  };
-  
+  }
+};
