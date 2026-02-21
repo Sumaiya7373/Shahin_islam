@@ -115,33 +115,33 @@ module.exports = {
       
       // Utility Commands
       if (categories.utility) {
-        menuText += `┏━━━━━━━━━━━━━━━━━\n`;
-        menuText += `┃ 🔧 UTILITY COMMAND\n`;
-        menuText += `┗━━━━━━━━━━━━━━━━━\n`;
+        menuText += `╭───────❖☆❖───────╮\n`;
+        menuText += `├◈🔧 𝐔𝐓𝐈𝐋𝐈𝐓𝐘 𝐂𝐎𝐌𝐌𝐀𝐍𝐃\n`;
+        menuText += `╰───────❖☆❖───────╯\n`;
         categories.utility.forEach(cmd => {
-          menuText += `│ ➜ ${config.prefix}${cmd.name}\n`;
+          menuText += `├◈ ➳❥ ${config.prefix}${cmd.name}\n`;
         });
         menuText += `\n`;
       }
 
        // Anime Commands
        if (categories.anime) {
-        menuText += `┏━━━━━━━━━━━━━━━━━\n`;
-        menuText += `┃ 👾 ANIME COMMAND\n`;
-        menuText += `┗━━━━━━━━━━━━━━━━━\n`;
+        menuText += `╭───────❖☆❖───────╮\n`;
+        menuText += `├◈👾 𝐀𝐍𝐈𝐌𝐄 𝐂𝐎𝐌𝐌𝐀𝐍𝐃\n`;
+        menuText += `╰───────❖☆❖───────╯\n`;
         categories.anime.forEach(cmd => {
-          menuText += `│ ➜ ${config.prefix}${cmd.name}\n`;
+          menuText += `├◈ ➳❥ ${config.prefix}${cmd.name}\n`;
         });
         menuText += `\n`;
       }
 
        // Textmaker Commands
        if (categories.utility) {
-        menuText += `┏━━━━━━━━━━━━━━━━━\n`;
-        menuText += `┃ 🖋️ TEXTMAKER COMMAND\n`;
-        menuText += `┗━━━━━━━━━━━━━━━━━\n`;
+        menuText += `╭───────❖☆❖───────╮\n`;
+        menuText += `├◈𝐓𝐄𝐗𝐓𝐌𝐀𝐊𝐄𝐑 𝐂𝐎𝐌𝐌𝐀𝐍𝐃\n`;
+        menuText += `╰───────❖☆❖───────╯\n`;
         categories.textmaker.forEach(cmd => {
-          menuText += `│ ➜ ${config.prefix}${cmd.name}\n`;
+          menuText += `├◈ ➳❥ ${config.prefix}${cmd.name}\n`;
         });
         menuText += `\n`;
       }
