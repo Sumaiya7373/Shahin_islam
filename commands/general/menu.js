@@ -60,11 +60,11 @@ module.exports = {
       
       // Group Commands
       if (categories.group) {
-        menuText += `┏━━━━━━━━━━━━━━━━━\n`;
-        menuText += `┃ 🔵 GROUP COMMAND\n`;
-        menuText += `┗━━━━━━━━━━━━━━━━━\n`;
+        menuText += `╭───────❖☆❖───────╮\n`;
+        menuText += `├◈🔵 𝐆𝐑𝐎𝐔𝐏 𝐂𝐎𝐌𝐌𝐀𝐍𝐃\n`;
+        menuText += `╰───────❖☆❖───────╯\n`;
         categories.group.forEach(cmd => {
-          menuText += `│ ➜ ${config.prefix}${cmd.name}\n`;
+          menuText += `├◈ ➳❥ ${config.prefix}${cmd.name}\n`;
         });
         menuText += `\n`;
       }
