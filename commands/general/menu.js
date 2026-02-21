@@ -93,22 +93,22 @@ module.exports = {
       
       // Media Commands
       if (categories.media) {
-        menuText += `┏━━━━━━━━━━━━━━━━━\n`;
-        menuText += `┃ 🎞️ MEDIA COMMAND\n`;
-        menuText += `┗━━━━━━━━━━━━━━━━━\n`;
+        menuText += `╭───────❖☆❖───────╮n`;
+        menuText += `├◈ 🎞️ 𝐌𝐄𝐃𝐈𝐀 𝐂𝐎𝐌𝐌𝐀𝐍𝐃\n`;
+        menuText += `╰───────❖☆❖───────╯\n`;
         categories.media.forEach(cmd => {
-          menuText += `│ ➜ ${config.prefix}${cmd.name}\n`;
+          menuText += `├◈ ➳❥ ${config.prefix}${cmd.name}\n`;
         });
         menuText += `\n`;
       }
       
       // Fun Commands
       if (categories.fun) {
-        menuText += `┏━━━━━━━━━━━━━━━━━\n`;
-        menuText += `┃ 🎭 FUN COMMAND\n`;
-        menuText += `┗━━━━━━━━━━━━━━━━━\n`;
+        menuText += `╭───────❖☆❖───────╮\n`;
+        menuText += `├◈  🎭 𝐅𝐔𝐍 𝐂𝐎𝐌𝐌𝐀𝐍𝐃\n`;
+        menuText += `╰───────❖☆❖───────╯\n`;
         categories.fun.forEach(cmd => {
-          menuText += `│ ➜ ${config.prefix}${cmd.name}\n`;
+          menuText += `├◈ ➳❥ ${config.prefix}${cmd.name}\n`;
         });
         menuText += `\n`;
       }
