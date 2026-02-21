@@ -38,11 +38,11 @@ module.exports = {
       
       // General Commands
       if (categories.general) {
-        menuText += `╭──────❖☆❖───────╮\n`;
-        menuText += `├◈🧭 GENERAL COMMAND\n`;
-        menuText += `╰───────❖☆❖──────╯\n`;
+        menuText += `╭───────❖☆❖───────╮\n`;
+        menuText += `├◈🧭𝐆𝐄𝐍𝐄𝐑𝐀𝐋 𝐂𝐎𝐌𝐌𝐀𝐍𝐃\n`;
+        menuText += `╰───────❖☆❖───────╯\n`;
         categories.general.forEach(cmd => {
-          menuText += `│ ➜ ${config.prefix}${cmd.name}\n`;
+          menuText += `├◈ ➳❥ ${config.prefix}${cmd.name}\n`;
         });
         menuText += `\n`;
       }
