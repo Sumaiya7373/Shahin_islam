@@ -4,11 +4,11 @@
 
 module.exports = {
     // Bot Owner Configuration
-    ownerNumber: ['01793447339','917023951514'], // Add your number without + or spaces (e.g., 919876543210)
+    ownerNumber: ['01793447339','01793447339'], // Add your number without + or spaces (e.g., 919876543210)
     ownerName: ['*~_ 𝐗𝐭𝐲𝐥𝐢𝐬𝐡_ღ꙰𝐒𝐡𝐚𝐡𝐢𝐧࿐_~**', '⧫𝐒ᮀ𝐇ᮀ𝐀ᮀ𝐇ᮀ𝐈ᮀ𝐍ᮁ'], // Owner names corresponding to ownerNumber array
     
     // Bot Configuration
-    botName: '🪀*⧫𝐒ᮀ𝐇ᮀ𝐀ᮀ𝐇ᮀ𝐈ᮀ𝐍ᮁ_ღ꙰𝐁ᮀ𝐎ᮀ𝐓ᮁ*🪀',
+    botName: '🪀*⧫𝐒ᮀ𝐇ᮀ𝐀ᮀ𝐇ᮀ𝐈ᮀ𝐍ᮁღ꙰𝐁ᮀ𝐎ᮀ𝐓ᮁ*🪀',
     prefix: '.',
     sessionName: 'session',
     sessionID: process.env.SESSION_ID || '',
