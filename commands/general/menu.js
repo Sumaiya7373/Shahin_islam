@@ -38,9 +38,9 @@ module.exports = {
       
       // General Commands
       if (categories.general) {
-        menuText += `┏━━━━━━━━━━━━━━━━━\n`;
-        menuText += `┃ 🧭 GENERAL COMMAND\n`;
-        menuText += `┗━━━━━━━━━━━━━━━━━\n`;
+        menuText += `╭──────❖☆❖───────╮\n`;
+        menuText += `├◈🧭 GENERAL COMMAND\n`;
+        menuText += `╰───────❖☆❖──────╯\n`;
         categories.general.forEach(cmd => {
           menuText += `│ ➜ ${config.prefix}${cmd.name}\n`;
         });
