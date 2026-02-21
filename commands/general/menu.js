@@ -30,11 +30,11 @@ module.exports = {
       const ownerNames = Array.isArray(config.ownerName) ? config.ownerName : [config.ownerName];
       const displayOwner = ownerNames[0] || config.ownerName || 'Bot Owner';
       
-      let menuText = `╭━━『 *${config.botName}* 』━━╮\n\n`;
-      menuText += `👋 Hello @${extra.sender.split('@')[0]}!\n\n`;
-      menuText += `⚡ Prefix: ${config.prefix}\n`;
-      menuText += `📦 Total Commands: ${commands.size}\n`;
-      menuText += `👑 Owner: ${displayOwner}\n\n`;
+      let menuText = `*╭┈─「* *${config.botName}**┈❍*\n\n`;
+      menuText += `👋 *~_𝐇𝐞𝐥𝐥𝐨𝐰_~* @${extra.sender.split('@')[0]}!\n\n`;
+      menuText += `⚡ *~_𝐩𝐫𝐞𝐟𝐢𝐱_~*: ${config.prefix}\n`;
+      menuText += `🪀 *~_𝐓𝐨𝐭𝐚𝐥 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬_~*: ${commands.size}\n`;
+      menuText += `👑 *~_𝐎𝐰𝐧𝐞𝐫_~*: ${displayOwner}\n\n`;
       
       // General Commands
       if (categories.general) {
