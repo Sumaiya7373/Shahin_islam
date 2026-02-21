@@ -49,11 +49,11 @@ module.exports = {
       
       // AI Commands
       if (categories.ai) {
-        menuText += `┏━━━━━━━━━━━━━━━━━\n`;
-        menuText += `┃ 🤖 AI COMMAND\n`;
-        menuText += `┗━━━━━━━━━━━━━━━━━\n`;
+        menuText += `╭───────❖☆❖───────╮\n`;
+        menuText += `├◈ 🤖 𝐀𝐥 𝐂𝐎𝐌𝐌𝐀𝐍𝐃\n`;
+        menuText += `╰───────❖☆❖───────╯\n`;
         categories.ai.forEach(cmd => {
-          menuText += `│ ➜ ${config.prefix}${cmd.name}\n`;
+          menuText += `├◈ ➳❥ ${config.prefix}${cmd.name}\n`;
         });
         menuText += `\n`;
       }
