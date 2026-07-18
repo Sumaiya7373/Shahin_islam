@@ -1,5 +1,5 @@
 /**
- * Tag All Command - Mention all group members
+ * Tag All ❤️Command - Mention all group members
  */
 
 module.exports = {
